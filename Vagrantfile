@@ -12,7 +12,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # Every Vagrant virtual environment requires a box to build off of.
   config.vm.box = "Opscode_centos-6.5"
 
-  config.omnibus.chef_version = :latest
+  #config.omnibus.chef_version = :latest
   # Disable automatic box update checking. If you disable this, then
   # boxes will only be checked for updates when the user runs
   # `vagrant box outdated`. This is not recommended.
@@ -92,9 +92,9 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     chef.cookbooks_path = "cookbooks"
     chef.roles_path = "roles"
     chef.data_bags_path = "data_bags"
-    chef.add_recipe "php"
+  #  chef.add_recipe "php"
   #  chef.add_recipe "chef-lighttpd"
-  #  chef.add_role "web"
+    chef.add_role("web")
   #
   #   # You may also specify custom JSON attributes:
   #   chef.json = { :mysql_password => "foo" }

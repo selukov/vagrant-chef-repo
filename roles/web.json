@@ -1,0 +1,9 @@
+{
+  "name": "vagrant",
+  "chef_type": "role",
+  "json_class": "Chef::Role",
+  "run_list": [
+    "recipe[php]",
+    "recipe[nginx]"
+  ]
+}
