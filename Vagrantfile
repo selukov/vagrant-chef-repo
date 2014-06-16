@@ -25,7 +25,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
   # Create a private network, which allows host-only access to the machine
   # using a specific IP.
-  # config.vm.network "private_network", ip: "192.168.33.10"
+  config.vm.network "private_network", ip: "192.168.56.10"
 
   # Create a public network, which generally matched to bridged network.
   # Bridged networks make the machine appear as another physical device on
@@ -91,8 +91,9 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     chef.custom_config_path = "Vagrantfile.chef"
     chef.cookbooks_path = "cookbooks"
     chef.roles_path = "roles"
-  #  chef.data_bags_path = "../my-recipes/data_bags"
+    chef.data_bags_path = "data_bags"
     chef.add_recipe "php"
+  #  chef.add_recipe "chef-lighttpd"
   #  chef.add_role "web"
   #
   #   # You may also specify custom JSON attributes:
