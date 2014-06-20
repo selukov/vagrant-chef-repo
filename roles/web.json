@@ -2,7 +2,7 @@
   "name": "vagrant",
   "json_class": "Chef::Role",
   "run_list": [
-    "recipe[php]",
+    "recipe[php::source]",
     "recipe[nginx]"
   ]
 }
